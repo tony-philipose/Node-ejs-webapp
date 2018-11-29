@@ -1,16 +1,18 @@
-var express = require('express');
-var app = express();
-var fs = require("fs");
+var net = require('net');
+var ip = process.stdin;
 
-app.get('/listUsers', function (req, res) {
-   fs.readFile( __dirname + "/" + "users.json", 'utf8', function (err, data) {
-      console.log( data );
-      res.end( data );
-   });
-})
+var server = net.createServer(function(socket){
 
-var server = app.listen(8081, function () {
-   var host = server.address().address
-   var port = server.address().port
-   console.log("Example app listening at http://%s:%s", host, port)
-})
+    socket.on('data', function(data1){
+        console.log('client: '+ data1);
+        ip.on('data', function(data2){
+            socket.write(data2);
+        });
+    });
+
+    // socket.on('close', function(data){
+    //     console.log("closed");
+    // });
+    
+});
+server.listen(1500,'127.0.0.1');
