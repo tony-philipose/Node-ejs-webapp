@@ -1,0 +1,1 @@
+module.exports.msgOne ="call msg vai obj , ok..!";
