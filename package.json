@@ -1,15 +1,11 @@
 {
-  "name": "chat",
+  "name": "even",
   "version": "1.0.0",
-  "description": "chat",
-  "main": "index.js",
+  "description": "",
+  "main": "event.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "tp",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.15.2",
-    "socket.io": "^2.1.1"
-  }
+  "author": "",
+  "license": "ISC"
 }
