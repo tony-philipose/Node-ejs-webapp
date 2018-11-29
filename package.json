@@ -1,15 +1,16 @@
 {
-  "name": "clintserver",
+  "name": "orm",
   "version": "1.0.0",
   "description": "",
-  "main": "client.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "net": "^1.0.2"
+    "mysql": "^2.16.0",
+    "mysql2": "^1.6.4",
+    "sequelize": "^4.41.2"
   }
 }
