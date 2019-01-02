@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html ng-app="angularApp">
+  <head>
+    <% include ../partials/head %>
+    <title>Student details </title>
+  </head>
+  <body>
+
+        <nav class="navbar navbar navbar-fixed-top navbar-inverse">
+          <div class="container-fluid ">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+              </button>
+              <a class="navbar-brand navtxt" href="#">SJ school</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav navtxt">
+                    <li class="active"><a href="" class="navtxt">Students</a></li>
+                    <li><a href="/students/add" class="navtxt">Admission</a></li>
+                    <!-- <li><a href="/students/marks" class="navtxt">Marks</a></li> -->
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right navtxt">
+                      <li><a href="" class="navtxt">logged in as<b> <%= user %></b></a></li>
+                      <li class=""><a href="/logout" class="navtxt">Logout</a></li>
+                  </ul>
+            </div>
+          </div>
+        </nav>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-2 col-md-1 col-sm-1 col-xs-1"></div>
+            <div class="col-lg-8 col-md-10 col-sm-10 col-xs-10">
+              <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tableMargin">
+                  <div class="table-responsive">  
+                    <table class="table table-striped css-serial">
+                            <thead>
+                                <tr class="table_header">
+                                    <th>Slno</th>
+                                    <th>Reg id</th>
+                                    <th>Fname</th>
+                                    <th>Lname</th>
+                                    <th>Dob</th>
+                                    <th>Joining</th>
+                                    <th>Class</th>
+                                    <th>Gender</th>
+                                    <th>Contact no</th>
+                                    <th>Email</th>
+                                    <th>Edit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <% data.forEach(function(results){ %>
+                                <tr>
+                                <td></td>
+                                <td data-title="sub">sj-<%= results.studid %></td>
+                                <td data-title="mark"><%= results.fname %></td>
+                                <td data-title="total"><%= results.lname %></td>
+                                <td data-title="sub"><%= results.dob %></td>
+                                <td data-title="mark"><%= results.joindate %></td>
+                                <td data-title="total"><%= results.class %></td>
+                                <td data-title="sub"><%= results.gender %></td>
+                                <td data-title="mark"><%= results.contact %></td>
+                                <td data-title="total"><%= results.email %></td>
+                                <td data-title="edit">
+                                  <a href="/students/edit/<%= results.studid %>" class="btn btn-info btn-sm">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                  </a>
+                                </td>
+                                </tr>
+                            <% }) %>  
+                            </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>    
+            </div>
+            <div class="col-lg-2 col-md-1 col-sm-1 col-xs-1"></div>
+          </div>
+        </div>
+
+        
+
+      <% include ../partials/footer %>
+  </body>
+</html>   

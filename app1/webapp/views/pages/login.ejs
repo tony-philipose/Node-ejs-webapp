@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html ng-app="angularApp">
+  <head>
+    <% include ../partials/head %>
+    <title>Index </title>
+  </head>
+  <body class="login_page">
+
+        <nav class="navbar navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+              </button>
+              <a class="navbar-brand navtxt" href="#">SJ school</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav navbar-right navtxt">
+                <li class="active"><a href="#" class="navtxt">Login <span class="glyphicon glyphicon-user"></span></a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-2 col-xs-1"></div>
+            <div class="col-lg-4 col-md-4 col-sm-8 col-xs-10 login_box">
+              <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                  <label class="login_caption"><center>Login</center></label>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
+              </div>
+              <div class="row ">
+                <div class="col-lg-2 col-md-1 col-sm-0 col-xs-0"></div>
+                <div class="col-lg-8 col-md-10 col-sm-12 col-xs-12">
+                  <form id="logIn" method="POST" action="/">
+                  <div class="form-group ">
+                    <label class="login_name">User name: </label>
+                    <input type="text" class="form-control login" id="username" name="username">
+                  </div>
+                  <div class="form-group ">
+                    <label class="login_pswd">Password: </label>
+                    <input type="password" class="form-control login" id="password" name="password">
+                  </div>
+                  <div class="row">
+                    <div class="col-md-1 col-sm-1 col-xs-1 col-lg-1">
+                      <label  class="c">
+                        <div class="check">
+                          <input type="checkbox" name="view">
+                            <span class="checkmark"></span>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="col-md-10 col-sm-10 col-xs-10 col-lg-10">
+                      <div>Show Password</div>
+                    </div>
+                  </div>
+                  <div>
+                    <input type="submit" name="save" id="login" value="Login" class="loginButton login">
+                  </div>
+                </form>
+                </div>
+                <div class="col-lg-2 col-md-1 col-sm-0 col-xs-0"></div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-2 col-xs-1"></div>
+          </div>
+        </div>
+      <% include ../partials/footer %>
+  </body>
+</html>   
